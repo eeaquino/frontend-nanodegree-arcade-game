@@ -1,3 +1,43 @@
-body {
-    text-align: center;
+body { text-align: center; }
+
+.score-board {
+    font-family: 'Press Start 2P', cursive;
+    width: 485px;
+    display: flex;
+    margin: 0 auto;
+    font-size: 12px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 30px;
+    padding: 10px;
 }
+
+#restart {
+    background-color: transparent;
+    border: thin solid #DDD;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 6px 16px -6px #777;
+}
+
+#restart:hover {
+    background-color: black;
+    color: white;
+}
+
+#counters {
+    display: flex;
+    flex-direction: column;
+    line-height: 16px;
+}
+
+#avatar img { height: 70px; }
+
+.pr-10 {
+    padding-right: 10px;
+    align-self: center;
+}
+
+.score-board #avatar { flex-grow: 1; }

@@ -90,10 +90,10 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {
+        game.allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
-        player.update();
+        game.player.update();
     }
 
     /* This function initially draws the "game level", it will then call
@@ -119,7 +119,7 @@ var Engine = (function(global) {
             row, col;
         
         // Before drawing, clear existing canvas
-        ctx.clearRect(0,0,canvas.width,canvas.height)
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         /* Loop through the number of rows and columns we've defined above
          * and, using the rowImages array, draw the correct image for that
@@ -149,11 +149,11 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
-        allEnemies.forEach(function(enemy) {
+        game.allEnemies.forEach(function(enemy) {
             enemy.render();
         });
 
-        player.render();
+        game.player.render();
     }
 
     /* This function does nothing but it could have been a good place to
@@ -173,7 +173,11 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        "images/char-cat-girl.png", 
+        "images/char-horn-girl.png", 
+        "images/char-pink-girl.png", 
+        "images/char-princess-girl.png"
     ]);
     Resources.onReady(init);
 
